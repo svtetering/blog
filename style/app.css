@@ -41,11 +41,6 @@ a:hover {
     color: #175081
 }
 
-.listed-post {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
 .post-meta {
     line-height: 1;
     color: gray;
@@ -76,19 +71,11 @@ a:hover {
 }
 
 hr {
-    border: 1px dashed gray;
+    border-top: 1px dashed gray;
 }
 
 .author-picture {
     border: 2px solid rgb(136, 136, 136);
     border-radius: 50%;
     width: 80px;
-}
-
-.pagination-button {
-
-}
-
-.pagination-button-right {
-
 }

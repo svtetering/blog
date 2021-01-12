@@ -2,7 +2,9 @@
 layout: main
 ---
 
-<span class="post-title">{{ title }}</span>
-<p><i>Posted on: {{ date | date: "%B %d, %Y" }}</i></p>
+<header>
+    <span class="post-title">{{ title }}</span>
+    <p class="post-meta">{{ date | date: "%B %d, %Y"}}</p>
+</header>
 
 {{ content }}
