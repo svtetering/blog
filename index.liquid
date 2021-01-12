@@ -1,0 +1,33 @@
+---
+title: Recent Posts
+layout: main
+pagination:
+    data: collections.posts
+    size: 5
+    alias: posts
+    reverse: true
+---
+
+{% for post in posts %}
+<div class="listed-post">
+    <header>
+        <a href="{{ post.url }}" class="post-title">{{ post.data.title }}</a>
+        <p class="post-meta">{{ post.date | date: "%B %d, %Y"}}</p>
+    </header>
+    <span class="excerpt">{% excerpt post %}</span>
+    <p><a href="{{ post.url }}">Read ></a></p>
+</div>
+{% endfor %}
+
+<p>
+    {% if pagination.href.previous %}
+    <a href="{{ pagination.href.previous }}" class="pagination-button-left"><- Previous</a>
+    {% else %}
+    <a class="pagination-button-left"><- Previous</a>
+    {% endif %}
+    {% if pagination.href.next %}
+    <a href="{{ pagination.href.next }}" class="pagination-button-right">Next -></a>
+    {% else %}
+    <a class="pagination-button-right">Next -></a>
+    {% endif %}
+</p>

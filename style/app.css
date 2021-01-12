@@ -1,0 +1,94 @@
+body {
+    font-size: 1em;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+    margin: 0px;
+
+    background-color: #fdf6e3;
+    color: rgb(80, 80, 80);
+}
+
+div.blog {
+    width: 95%;
+    max-width: 960px;
+    margin: 0px auto 0;
+}
+
+.blog-header {
+    display: block;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    text-align: center;
+
+    width: 95%;
+    max-width: 1080px;
+    margin: 0px auto 0;
+}
+
+footer {
+    text-align: center;
+    margin: 20px;
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none
+}
+
+a:hover {
+    color: #175081
+}
+
+.listed-post {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.post-meta {
+    line-height: 1;
+    color: gray;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.blog-title {
+    font-weight: normal;
+    font-size: 2.8em;
+    text-align: center;
+    margin: 16px;
+    color: rgb(80, 80, 80);
+}
+
+.header-links {
+    text-align: center;
+    text-decoration: none;
+}
+
+.post-title {
+    font-size: 2em;
+}
+
+.excerpt {
+    font-size: 1em;
+    color: rgb(110, 110, 110);
+}
+
+hr {
+    border: 1px dashed gray;
+}
+
+.author-picture {
+    border: 2px solid rgb(136, 136, 136);
+    border-radius: 50%;
+    width: 80px;
+}
+
+.pagination-button {
+
+}
+
+.pagination-button-right {
+
+}

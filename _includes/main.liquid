@@ -1,0 +1,36 @@
+---
+title: Default title
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{{ title }} | tikveel.nl</title>
+        <link rel="stylesheet" href="/style/app.css">
+        <!-- Syntax highlighting -->
+        <link href="https://unpkg.com/prismjs@1.23.0/themes/prism-okaidia.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="blog">
+            <header class="blog-header">
+                <a href="/" class="blog-title">tikveel.nl</a>
+                <div class="header-links">
+                    <a href="/">Blog</a>
+                    •
+                    <a href="/about">About</a>
+                </div>
+            </header>
+            <hr>
+
+            {{ content | safe }}
+
+            <hr>
+            <footer>
+            <a href="/about"><img src="/img/sbeve.png" class="author-picture"></a>
+            <p>© Steven van Tetering</p>
+        </footer>
+        </div>
+    </body>
+</html>
