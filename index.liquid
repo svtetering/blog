@@ -23,11 +23,11 @@ pagination:
     {% if pagination.href.previous %}
     <a href="{{ pagination.href.previous }}" class="pagination-button-left"><- Previous</a>
     {% else %}
-    <a class="pagination-button-left"><- Previous</a>
+    <a class="pagination-button-left"><s><- Previous</s></a>
     {% endif %}
     {% if pagination.href.next %}
     <a href="{{ pagination.href.next }}" class="pagination-button-right">Next -></a>
     {% else %}
-    <a class="pagination-button-right">Next -></a>
+    <a class="pagination-button-right"><s>Next -></s></a>
     {% endif %}
 </p>
