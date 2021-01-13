@@ -3,6 +3,7 @@ title: Test Post
 layout: post
 tags: posts
 date: 2021-01-12
+excerpt: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac quam sed lorem maximus convallis. Vivamus lorem ipsum, efficitur in erat in, lacinia egestas nisi. Nam rhoncus orci mi, sed pharetra justo eleifend pretium. Etiam commodo magna enim, eu efficitur neque porta id. Sed interdum pretium lacus, id pulvinar massa porttitor sit amet. Duis lacus velit, finibus sed nulla a, pellentesque vehicula sapien. Curabitur consequat orci at quam efficitur, et tempus nibh tincidunt. Proin tincidunt tincidunt nunc, nec imperdiet nunc ultrices sit amet. Suspendisse lacinia maximus nisi, non pharetra enim interdum in.

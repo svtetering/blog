@@ -1,36 +1,22 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const pluginSEO = require("eleventy-plugin-seo");
+const excerpt = require('eleventy-plugin-excerpt');
 
 module.exports = function(eleventyConfig) {
     eleventyConfig.addPlugin(syntaxHighlight);
     eleventyConfig.addPlugin(pluginRss);
-
-    eleventyConfig.addShortcode('excerpt', post => extractExcerpt(post));
+    eleventyConfig.addPlugin(pluginSEO, {
+        title: "tikveel.nl",
+        description: "My thoughts, projects and ideas.",
+        url: "https://tikveel.nl",
+        author: "Steven van Tetering"
+    });
+    eleventyConfig.addPlugin(excerpt);
 
     eleventyConfig.addPassthroughCopy("style");
     eleventyConfig.addWatchTarget("style");
 
     eleventyConfig.addPassthroughCopy("img");
     eleventyConfig.addWatchTarget("img");
-}
-
-function extractExcerpt(doc) {
-    if (!doc.hasOwnProperty('templateContent')) {
-        console.warn('❌ Failed to extract excerpt: Document has no property `templateContent`.');
-        return;
-    }
-  
-    const excerptSeparator = '<!--more-->';
-    const content = doc.templateContent;
-  
-    if (content.includes(excerptSeparator)) {
-        return content.substring(0, content.indexOf(excerptSeparator)).trim();
-    }
-  
-    const pCloseTag = '</p>';
-    if (content.includes(pCloseTag)) {
-        return content.substring(0, content.indexOf(pCloseTag) + pCloseTag.length);
-    }
-  
-    return content;
 }

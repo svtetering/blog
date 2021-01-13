@@ -6,6 +6,7 @@ pagination:
     size: 5
     alias: posts
     reverse: true
+ogtype: website
 ---
 
 {% for post in posts %}
@@ -14,7 +15,7 @@ pagination:
         <a href="{{ post.url }}" class="post-title">{{ post.data.title }}</a>
         <p class="post-meta">{{ post.date | date: "%B %d, %Y"}}</p>
     </header>
-    <span class="excerpt">{% excerpt post %}</span>
+    <p class="excerpt">{% excerpt post %}</p>
     <p><a href="{{ post.url }}">Read ></a></p>
 </div>
 {% endfor %}

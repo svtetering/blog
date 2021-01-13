@@ -1,10 +1,10 @@
 ---
 layout: main
+ogtype: article
 ---
-
 <header>
     <span class="post-title">{{ title }}</span>
     <p class="post-meta">{{ date | date: "%B %d, %Y"}}</p>
 </header>
 
-{{ content }}
+{{ content | safe }}
