@@ -34,11 +34,17 @@ footer {
 
 a {
     color: #337ab7;
-    text-decoration: none
+    text-decoration: none;
 }
 
 a:hover {
     color: #175081
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(211, 211, 198);
+    color: black;
 }
 
 .post-meta {
@@ -63,6 +69,10 @@ a:hover {
 
 .post-title {
     font-size: 2em;
+}
+
+.edited {
+    color: rgb(175, 175, 175);
 }
 
 .excerpt {

@@ -13,7 +13,7 @@ ogtype: website
 <div class="listed-post">
     <header>
         <a href="{{ post.url }}" class="post-title">{{ post.data.title }}</a>
-        <p class="post-meta">{{ post.date | date: "%B %d, %Y"}}</p>
+        <p class="post-meta">{{ post.date | date: "%B %d, %Y"}}{% if post.data.edited %} <span class="edited">(edited {{post.data.edited | date: "%B %d, %Y"}})</span>{% endif %}</p>
     </header>
     <p class="excerpt">{% excerpt post %}</p>
     <p><a href="{{ post.url }}">Read ></a></p>
