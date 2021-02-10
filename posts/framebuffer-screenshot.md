@@ -205,11 +205,11 @@ int main(int argc, char** argv) {
 
 And that's it! Now let's compile and run the program!
 
-![](/img/demo.bmp)
+![](/img/demo.png)
 
 Voilà! A viewable image of our Linux framebuffer! Now, how could we actually use this to capture anything interesting? Well, we can run some program, wait a bit, and then run our screenshot program as a background process! Let's try capturing a still image of [cmatrix](https://github.com/abishekvashok/cmatrix) using this approach. Running the command `((sleep 3 && ./fbscreenshot) &) && cmatrix` gives us the following good-looking image:
 
-![](/img/cmatrix.bmp)
+![](/img/cmatrix.png)
 
 Would you look at that :')
 
