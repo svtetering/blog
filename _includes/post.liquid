@@ -3,7 +3,7 @@ layout: main
 ogtype: article
 ---
 <header>
-    <span class="post-title">{{ title }}</span>
+    <span class="post-title">{{ title | escape }}</span>
     <p class="post-meta">{{ date | date: "%B %d, %Y"}}{% if edited %} <span class="edited">(edited {{edited | date: "%B %d, %Y"}})</span>{% endif %}</p>
 </header>
 
