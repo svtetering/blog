@@ -47,6 +47,10 @@ code {
     color: black;
 }
 
+img {
+    max-width: 100%;
+}
+
 .post-meta {
     line-height: 1;
     color: gray;
