@@ -3,6 +3,7 @@ title: The (possibly) simplest way to screenshot your Linux framebuffer with C
 layout: post
 tags: posts
 date: 2021-02-10
+edited: 2021-02-12
 excerpt: Converting your Linux framebuffer to an uncompressed bitmap file, just by adding a header.
 ---
 
@@ -48,17 +49,17 @@ Starting off with the code responsible for writing the headers:
 
 ```c
 void write_bmp_header(char* buffer, int width, int height, int bytes_per_pixel, size_t image_size) {
-    size_t file_size = image_size + 52;
+    size_t file_size = image_size + 54;
 
     // Set all bytes in the header to 0
-    memset(buffer, 0, 52);
+    memset(buffer, 0, 54);
 
     // Magic number: BM
     buffer[0x00] = 0x42;
     buffer[0x01] = 0x4D;
 
     // File size
-    char* file_size_header = &buffer[2];
+    char* file_size_header = &buffer[0x02];
     memcpy(file_size_header, (uint32_t*)&file_size, sizeof(uint32_t));
 
     // Pixel data starting address
@@ -177,7 +178,7 @@ int main(int argc, char** argv) {
     
     size_t image_size = capture_width * capture_height * bytes_per_pixel + padding_bytes * capture_height;
     size_t file_size = image_size + 54;
-
+    
     char data[file_size];
     write_bmp_header(&data[0], capture_width, -capture_height, bytes_per_pixel, image_size);
 
@@ -191,7 +192,7 @@ int main(int argc, char** argv) {
     char* pixel_data = &data[0x36];
     read_framebuffer_pixels(pixel_data, framebuffer_fd, vinfo, bytes_per_pixel, padding_bytes);
 
-    int output_fd = open(output_path, O_WRONLY | O_CREAT, 0644);
+    int output_fd = open(output_path, O_WRONLY | O_CREAT | O_TRUNC, 0644);
     if (output_fd == -1) {
         perror("open");
         return 1;
