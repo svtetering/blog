@@ -4,7 +4,7 @@ body {
 
     margin: 0px;
 
-    background-color: #fdf6e3;
+    background-color: #fefefe;
     color: rgb(80, 80, 80);
 }
 
@@ -12,6 +12,10 @@ div.blog {
     width: 95%;
     max-width: 960px;
     margin: 0px auto 0;
+}
+
+div.content {
+    line-height: 1.4;
 }
 
 .blog-header {
@@ -92,4 +96,5 @@ hr {
     border: 2px solid rgb(136, 136, 136);
     border-radius: 50%;
     width: 80px;
+    margin-top: 4px;
 }
